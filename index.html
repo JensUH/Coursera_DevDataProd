@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sales prediction based on marketing spending by Company X</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Sales prediction based on marketing spending by Company X">
+  <meta name="author" content="Jens">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Sales prediction based on marketing spending by Company X</h1>
+    <h2></h2>
+    <p>Jens<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Needs</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Company X needs to improve its sales numbers.</p>
+
+<p>Company X currently devide its marketing budget across advertisement in TV, Radio and Dailies.</p>
+
+<p>Company X currently have two competitors who runs advertisement campaigns as well.</p>
+
+<p>However, there are no current knowledge of what effect these different advertisements have on sales.</p>
+
+<p>Thus, knowledge of how to optimize the marketing budget to attain highest possible Return On Investment is needed.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Approach</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Using previous sales and marketing data from (fictitious) Company X to predict how future sales will be driven by spending on different media groups.</p>
+
+<p>The following Marketing Mix Model is used:</p>
+
+<pre><code class="r">Sales &lt;- Base + 0.54*Adstock(TV, 0.7) + 0.61*Adstock(Radio, 0.6) +
+     0.34*Adstock(Dailies, 0.78) - 0.32*Adstock(Competitor1, 0.72) -
+     0.17*Adstock(Competitor2, 0.73)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;Base&#39; not found
+</code></pre>
+
+<p>The function Adstock, is a transformation of the funds spend on a media that takes care of the fact that:</p>
+
+<ol>
+<li>Media spending in one week will same some effect in the following week (&quot;spill-over effect&quot;)</li>
+<li>There is a limit to how high sales can be increased by advertisement in a particular media</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Benefits</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Using the constructed Shiny App, Company X will be able to see the predicted effect on sales of their media allocation budget for the next four weeks.</p>
+
+<p>With sliders, the spending on Tv, Radio, and Dailies in the next four weeks can be set.</p>
+
+<p>The following is then reported:</p>
+
+<ol>
+<li>The total medial spending the next four weeks</li>
+<li>The predicted total sales the next for weeks</li>
+<li>The predicted Return on Investment</li>
+</ol>
+
+<p>A nice plot is added give a visual understanding of different allocation.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Cost</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The first one is free...</p>
+
+<p>The next one is gonna cost you!</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Needs'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Approach'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Benefits'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Cost'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title=''>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
